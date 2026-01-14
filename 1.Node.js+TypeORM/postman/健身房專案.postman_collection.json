@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "77d63f06-8f8b-4c10-8467-152a091bd025",
+		"name": "健身房專案",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "42561347"
+	},
+	"item": [
+		{
+			"name": "取得購買方案列表",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8080/api/credit-package"
+			},
+			"response": []
+		},
+		{
+			"name": "新增購買方案",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"七天方案組合包\",\r\n    \"price\": 700,\r\n    \"credit_amount\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/api/credit-package"
+			},
+			"response": []
+		},
+		{
+			"name": "刪除購買方案",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8080/api/credit-package/080adb97-ff8d-4528-b90f-6cf364d3216e"
+			},
+			"response": []
+		},
+		{
+			"name": "取得教練專長列表",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8080/api/coaches/skill"
+			},
+			"response": []
+		},
+		{
+			"name": "新增教練專長",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"陳教練\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/api/coaches/skill"
+			},
+			"response": []
+		},
+		{
+			"name": "刪除教練專長",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8080/api/coaches/skill/0305931d-37bd-44b1-aa66-daaf8a86206a"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,4 +1,3 @@
-// db.js
 const { DataSource, EntitySchema } = require("typeorm")
 
 const CreditPackage = new EntitySchema({

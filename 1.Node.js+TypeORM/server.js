@@ -133,13 +133,10 @@ const requestListener = async (req, res) => {
       }))
       res.end()
     }
-  } else if (req.method === "OPTIONS") {
-    res.writeHead(200, headers)
-    res.end()
   } else if (req.url === "/api/coaches/skill" && req.method === "GET") {
     try {
       const packages = await AppDataSource.getRepository("Skill").find({
-        select: ["id", "name", "createdAt"]
+        select: ["id", "name"]
       })
       res.writeHead(200, headers)
       res.write(JSON.stringify({
@@ -184,9 +181,7 @@ const requestListener = async (req, res) => {
           return
         }
         const newPackage = await SkillRepo.create({
-          name: data.name,
-          credit_amount: data.credit_amount,
-          price: data.price
+          name: data.name
         })
         const result = await SkillRepo.save(newPackage)
         res.writeHead(200, headers)
@@ -205,10 +200,10 @@ const requestListener = async (req, res) => {
         res.end()
       }
     })
-  } else if (req.url.startsWith("/api/coaches/skill") && req.method === "DELETE") {
+  } else if (req.url.startsWith("/api/coaches/skill/") && req.method === "DELETE") {
     try {
-      const packageId = req.url.split("/").pop()
-      if (isUndefined(packageId) || isNotValidSting(packageId)) {
+      const coacheId = req.url.split("/").pop()
+      if (isUndefined(coacheId) || isNotValidSting(coacheId)) {
         res.writeHead(400, headers)
         res.write(JSON.stringify({
           status: "failed",
@@ -217,7 +212,7 @@ const requestListener = async (req, res) => {
         res.end()
         return
       }
-      const result = await AppDataSource.getRepository("Skill").delete(packageId)
+      const result = await AppDataSource.getRepository("Skill").delete(coacheId)
       if (result.affected === 0) {
         res.writeHead(400, headers)
         res.write(JSON.stringify({
@@ -241,6 +236,9 @@ const requestListener = async (req, res) => {
       }))
       res.end()
     }
+  } else if (req.method === "OPTIONS") {
+    res.writeHead(200, headers)
+    res.end()
   } else {
     res.writeHead(404, headers)
     res.write(JSON.stringify({
