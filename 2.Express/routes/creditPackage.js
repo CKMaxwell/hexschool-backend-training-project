@@ -3,6 +3,8 @@ const express = require('express')
 const router = express.Router()
 const { dataSource } = require('../db/data-source')
 const logger = require('../utils/logger')('CreditPackage')
+// 之後可以把驗證提取出來，如下所示
+// const {isValidString, isNumber} = require('../utils/validUtils')
 
 function isUndefined (value) {
   return value === undefined

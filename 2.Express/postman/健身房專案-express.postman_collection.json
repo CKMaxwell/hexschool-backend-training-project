@@ -1,0 +1,362 @@
+{
+  "info": {
+    "_postman_id": "a9df7973-84e7-4f29-bea3-2330605225e1",
+    "name": "健身房專案-express",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42561347"
+  },
+  "item": [
+    {
+      "name": "取得購買方案列表",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/credit-package",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "credit-package"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "新增購買方案",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"六天方案組合包\",\r\n    \"price\": 700,\r\n    \"credit_amount\": 8\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/credit-package",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "credit-package"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刪除購買方案",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/credit-package/41f8a399-0d42-45cc-850d-c8888d6d2782",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "credit-package",
+            "41f8a399-0d42-45cc-850d-c8888d6d2782"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "取得教練專長列表",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/skill",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "skill"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "新增教練專長",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"陳教練\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/skill",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "skill"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刪除教練專長",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/skill/a46df9ce-b36f-4403-8fd7-f6088222a753",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "skill",
+            "a46df9ce-b36f-4403-8fd7-f6088222a753"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "使用者註冊",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"name\" : \"測試使用者\",\r\n\t\"email\" : \"test01@example.com\",\r\n\t\"password\" : \"Hexschool12345\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/users/signup",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "將使用者新增為教練",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"experience_years\" : 1,\r\n\t\"description\" : \"瑜伽教練\",\r\n\t\"profile_image_url\" : \"https://...\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/admin/coaches/11b5a56b-e9cc-4a60-9fb6-a3fe6afa2973",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "admin",
+            "coaches",
+            "11b5a56b-e9cc-4a60-9fb6-a3fe6afa2973"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "新增教練課程資料",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"user_id\" : \"11b5a56b-e9cc-4a60-9fb6-a3fe6afa2973\",\r\n\t\"skill_id\" : \"a5cdee1e-2542-41b1-995b-07bf57374a00\",\r\n\t\"name\" : \"瑜伽課程\",\r\n\t\"description\" : \"瑜伽課程介紹\",\r\n\t\"start_at\" : \"2025-01-01 16:00:00\",\r\n\t\"end_at\" : \"2025-01-01 18:00:00\",\r\n\t\"max_participants\" : 10,\r\n\t\"meeting_url\" : \"https://....\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/admin/coaches/courses",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "admin",
+            "coaches",
+            "courses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "編輯教練課程資料",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"skill_id\" : \"a5cdee1e-2542-41b1-995b-07bf57374a00\",\r\n\t\"name\" : \"瑜伽課程\",\r\n\t\"description\" : \"瑜伽課程介紹\",\r\n\t\"start_at\" : \"2025-01-01 16:00:00\",\r\n\t\"end_at\" : \"2025-01-01 18:00:00\",\r\n\t\"max_participants\" : 10,\r\n\t\"meeting_url\" : \"https://....\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/admin/coaches/courses/c4feaf36-02b3-44af-83fa-73a0498421b4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "admin",
+            "coaches",
+            "courses",
+            "c4feaf36-02b3-44af-83fa-73a0498421b4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "取得教練列表",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/coaches/?per=10&page=1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "coaches",
+            ""
+          ],
+          "query": [
+            {
+              "key": "per",
+              "value": "10"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "取得教練詳細資訊",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/coaches/8fb905e8-6a21-4ae8-b3d6-44e7ed69d057",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "coaches",
+            "8fb905e8-6a21-4ae8-b3d6-44e7ed69d057"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
